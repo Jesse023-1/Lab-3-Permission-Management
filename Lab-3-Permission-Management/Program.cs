@@ -28,11 +28,62 @@ namespace Lab_3_Permission_Management
             else
                 Console.WriteLine("Operator does not have read permission");
 
+            //Code for Remove permission for testing
+            /*
+            operatorUser.RemovePermission(Permissions.Read);
+            if (operatorUser.HasPermission(Permissions.Read))
+                Console.WriteLine("Operator has read permission");
+            else
+                Console.WriteLine("Operator does not have read permission");
+            operatorUser.AddPermission(Permissions.Read); 
+            */
+
+            managerUser.multiplyPermission(Permissions.Read, Permissions.Write);
+            managerUser.AddPermission(Permissions.Execute);
+            if (managerUser.HasPermission(Permissions.Read) && managerUser.HasPermission(Permissions.Write) 
+                && managerUser.HasPermission(Permissions.Execute))
+                Console.WriteLine("Manager has read, write, execute permission");
+            else
+                Console.WriteLine("Manager does not have read & write permission");
+
+            SeniorUser.multiplyPermission(Permissions.Read,Permissions.Write);
+            if (SeniorUser.HasPermission(Permissions.Read) &&  SeniorUser.HasPermission(Permissions.Write))
+                Console.WriteLine("Senior has read & write permission");
+            else
+                Console.WriteLine("Senior does not have read & write permission");
+            
+            //Code for removeMultiplyPermission for testing
+            /*
+            SeniorUser.removeMultiplyPermission(Permissions.Read, Permissions.Write);
+            if (SeniorUser.HasPermission(Permissions.Read) && SeniorUser.HasPermission(Permissions.Write))
+                Console.WriteLine("Senior has read & write permission");
+            else
+                Console.WriteLine("Senior does not have read & write permission");
+            */
+
+            adminUser.AddPermission (Permissions.Admin);
+            if (adminUser.HasPermission(Permissions.Read) && adminUser.HasPermission(Permissions.Write)
+                && adminUser.HasPermission(Permissions.Execute))
+                Console.WriteLine("Admin has read, write, & execute permission");
+            else
+                Console.WriteLine("Admin does not have read, write, & execute permission");
+
+            //removeMultiplyPermission test. Result keeps read. 
+            /*
+            adminUser.removeMultiplyPermission(Permissions.Write,Permissions.Execute);
+            if (adminUser.HasPermission(Permissions.Read) && adminUser.HasPermission(Permissions.Write)
+                && adminUser.HasPermission(Permissions.Execute))
+                Console.WriteLine("Admin has read, write, & execute permission");
+            else if (adminUser.HasPermission(Permissions.Read))
+                Console.WriteLine("Admin has read permission");
+            else
+                Console.WriteLine("Admin does not have read, write, & execute permission");
+            */
             /**
              * Look at tasks description in lab3.1 and complete the remaining tasks
              */
-            
-            
+
+
 
 
         }
