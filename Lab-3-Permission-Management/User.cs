@@ -45,7 +45,7 @@ namespace Lab_3_Permission_Management
         public void AddPermission(Permissions permission)
         {
             // complete code to add a permission
-            permissions = permission | permissions;
+            permissions |= permission;
             if (permission == Permissions.Admin)
                 permissions = Permissions.Read | Permissions.Write | Permissions.Execute;
 
@@ -62,7 +62,7 @@ namespace Lab_3_Permission_Management
         public void multiplyPermission(Permissions permission1,Permissions permission2)
         {
             //complete code to multiply permissions
-            permissions = permissions | permission1 | permission2 ;
+            permissions |= permission1 | permission2 ;
             
         }
         //  remove multiple permisions

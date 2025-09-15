@@ -35,11 +35,10 @@ namespace Lab_3_Permission_Management
                 Console.WriteLine("Operator has read permission");
             else
                 Console.WriteLine("Operator does not have read permission");
-            operatorUser.AddPermission(Permissions.Read); 
             */
 
-            managerUser.multiplyPermission(Permissions.Read, Permissions.Write);
             managerUser.AddPermission(Permissions.Execute);
+            managerUser.multiplyPermission(Permissions.Read, Permissions.Write);
             if (managerUser.HasPermission(Permissions.Read) && managerUser.HasPermission(Permissions.Write) 
                 && managerUser.HasPermission(Permissions.Execute))
                 Console.WriteLine("Manager has read, write, execute permission");
