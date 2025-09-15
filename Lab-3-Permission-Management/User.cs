@@ -73,6 +73,17 @@ namespace Lab_3_Permission_Management
                 Permissions.Execute ^ (permission1 | permission2));
 
         }
+        //  Add multiple permisions
+        public void multiplyPermission(Permissions permission1,Permissions permission2)
+        {
+            //complete code to multiply permissions
+
+        }
+        //  remove multiple permisions
+        public void removeMultiplyPermission(Permissions permission1, Permissions permission2)
+        {
+            //complete code to remove multiple permissions
+        }
 
         public bool HasPermission(Permissions permission)
         {
