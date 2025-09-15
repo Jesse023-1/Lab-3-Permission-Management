@@ -68,7 +68,7 @@ namespace Lab_3_Permission_Management
             else
                 Console.WriteLine("Admin does not have read, write, & execute permission");
 
-            //removeMultiplyPermission test. Result keeps read. 
+            //removeMultiplyPermission test. Result keeps Read. 
             /*
             adminUser.removeMultiplyPermission(Permissions.Write,Permissions.Execute);
             if (adminUser.HasPermission(Permissions.Read) && adminUser.HasPermission(Permissions.Write)
